@@ -1,0 +1,16 @@
+experiment:
+  name: "sklearn_regression_experiment"
+  tracking_uri: "azureml://westus2.api.azureml.ms/mlflow/v1.0/subscriptions/ea4faa5b-5e44-4236-91f6-5483d5b17d14/resourceGroups/trangevi/providers/Microsoft.MachineLearningServices/workspaces/trangevi_wus2?"
+  artifact_location: "./metadata/mlflow/mlartifacts"
+
+# Set the registry server URI. This property is especially useful if you have a registry
+# server that’s different from the tracking server.
+# model_registry:
+#   uri: sqlite:////tmp/registry.db
+
+INGEST_DATA_LOCATION: "./data/house_prices_data/train.csv"
+
+# Specify the format of the dataset
+INGEST_DATA_FORMAT: csv
+# Override the default train / validation / test dataset split ratios
+SPLIT_RATIOS: [0.80, 0.10, 0.10]

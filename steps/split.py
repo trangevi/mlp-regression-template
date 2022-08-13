@@ -21,6 +21,7 @@ def process_splits(
              validation dataset, and the processed test dataset.
     """
 
+    """
     def process(df: DataFrame):
         # Drop invalid data points
         cleaned = df.dropna()
@@ -40,5 +41,9 @@ def process_splits(
         cleaned["trip_duration"] = trip_duration.map(lambda x: x.total_seconds() / 60)
 
         return cleaned
+    """
+
+    def process(df: DataFrame):
+        return df[["LotArea", "GrLivArea", "GarageArea", "YearBuilt", "SalePrice"]]
 
     return process(train_df), process(validation_df), process(test_df)
